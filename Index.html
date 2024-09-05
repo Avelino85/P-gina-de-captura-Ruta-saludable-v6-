@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descarga tu eBook gratuito</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #e74c3c;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="text"], input[type="email"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Descarga tu eBook gratuito!</h1>
+        <h2>Recetas para adelgazar en 21 días sin dietas ni ejercicios</h2>
+        <p>Rellena el formulario para recibir tu eBook gratis y descubre cómo puedes adelgazar rápidamente.</p>
+
+        <!-- Imagen del eBook -->
+        <img src="https://i.postimg.cc/NGWxQ44C/1725523983.png" alt="eBook de recetas para adelgazar">
+
+        <!-- Formulario personalizado -->
+        <form id="ebook-form">
+            <input type="text" id="name" placeholder="Tu Nombre" required>
+            <input type="email" id="email" placeholder="Tu Correo Electrónico" required>
+            <button type="submit">Descargar eBook</button>
+        </form>
+    </div>
+
+    <script>
+        // Função para lidar com a submissão do formulário
+        document.getElementById('ebook-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
+
+            // Aqui você pode adicionar validações adicionais, se necessário
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+
+            // Simples validação de exemplo
+            if (name && email) {
+                // Redireciona para o eBook após o preenchimento
+                window.location.href = "https://drive.google.com/file/d/1NySwQ6p6VGLluLSIo03OidVKXz1k3I0l/view";
+            } else {
+                alert('Por favor, rellena todos los campos.');
+            }
+        });
+    </script>
+</body>
+</html>
